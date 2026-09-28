@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Práctica Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-dark bg-primary sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                Práctica Bootstrap
+            </a>
+
+            <ul class="nav nav-pills" id="vistas-tab" role="tablist">
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-white active" id="inicio-tab" data-bs-toggle="pill" data-bs-target="#inicio" type="button" role="tab" aria-controls="inicio" aria-selected="true">
+                        Inicio
+                    </button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-white" id="listado-tab" data-bs-toggle="pill" data-bs-target="#listado" type="button" role="tab" aria-controls="listado" aria-selected="false">
+                        Listado
+                    </button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-white" id="formulario-tab" data-bs-toggle="pill" data-bs-target="#formulario" type="button" role="tab" aria-controls="formulario" aria-selected="false">
+                        Formulario
+                    </button>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-white" id="imagenes-tab" data-bs-toggle="pill" data-bs-target="#imagenes" type="button" role="tab" aria-controls="imagenes" aria-selected="false">
+                        Imágenes
+                    </button>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <div class="tab-content flex-grow-1" id="vistas-contenido">
+
+        <section class="tab-pane fade show active vista-centrada" id="inicio" role="tabpanel" aria-labelledby="inicio-tab">
+
+            <div class="container py-5">
+
+                <div class="p-5 bg-light rounded shadow-sm">
+
+                    <h1 class="display-4">
+                        Bienvenido
+                    </h1>
+
+                    <p class="lead">
+                        Práctica de creación de una página web utilizando Bootstrap.
+                    </p>
+
+                    <hr>
+
+                    <p>
+                        En esta página se utilizan diferentes elementos de Bootstrap
+                        como tablas, formularios, botones, tarjetas y columnas.
+                    </p>
+
+                    <button type="button" class="btn btn-primary" onclick="document.getElementById('listado-tab').click()">
+                        Ver contenido
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="tab-pane fade bg-light vista-centrada" id="listado" role="tabpanel" aria-labelledby="listado-tab">
+
+            <div class="container py-5">
+
+                <h2 class="text-center mb-4">
+                    Listado de alumnos
+                </h2>
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered table-striped table-hover">
+
+                        <thead class="table-dark">
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Apellido</th>
+                                <th>Edad</th>
+                                <th>Ciudad</th>
+                                <th>Correo</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>1</td>
+                                <td>Alberto</td>
+                                <td>González</td>
+                                <td>22</td>
+                                <td>Ciudad de México</td>
+                                <td>alberto@correo.com</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Ana</td>
+                                <td>López</td>
+                                <td>21</td>
+                                <td>Monterrey</td>
+                                <td>ana@correo.com</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Carlos</td>
+                                <td>Martínez</td>
+                                <td>23</td>
+                                <td>Guadalajara</td>
+                                <td>carlos@correo.com</td>
+                            </tr>
+
+                            <tr>
+                                <td>4</td>
+                                <td>María</td>
+                                <td>Hernández</td>
+                                <td>20</td>
+                                <td>Puebla</td>
+                                <td>maria@correo.com</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="tab-pane fade vista-centrada" id="formulario" role="tabpanel" aria-labelledby="formulario-tab">
+
+            <div class="container py-5">
+
+                <h2 class="text-center mb-4">
+                    Formulario de registro
+                </h2>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-8">
+
+                        <div class="card shadow-sm">
+
+                            <div class="card-body">
+
+                                <form>
+
+                                    <div class="row">
+
+                                        <div class="col-md-6 mb-3">
+
+                                            <label for="nombre" class="form-label">
+                                                Nombre
+                                            </label>
+
+                                            <input type="text" class="form-control" id="nombre" name="nombre">
+
+                                        </div>
+
+
+                                        <div class="col-md-6 mb-3">
+
+                                            <label for="apellido" class="form-label">
+                                                Apellido
+                                            </label>
+
+                                            <input type="text" class="form-control" id="apellido" name="apellido">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="mb-3">
+
+                                        <label for="correo" class="form-label">
+                                            Correo electrónico
+                                        </label>
+
+                                        <input type="email" class="form-control" id="correo" name="correo">
+
+                                    </div>
+
+
+                                    <div class="row">
+
+                                        <div class="col-md-6 mb-3">
+
+                                            <label for="edad" class="form-label">
+                                                Edad
+                                            </label>
+
+                                            <input type="number" class="form-control" id="edad" name="edad">
+
+                                        </div>
+
+
+                                        <div class="col-md-6 mb-3">
+
+                                            <label for="fechaNacimiento" class="form-label">
+                                                Fecha de nacimiento
+                                            </label>
+
+                                            <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento">
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="mb-3">
+
+                                        <label for="ciudad" class="form-label">
+                                            Ciudad
+                                        </label>
+
+                                        <select class="form-select" id="ciudad" name="ciudad">
+
+                                            <option selected>
+                                                Selecciona una ciudad
+                                            </option>
+
+                                            <option>
+                                                Ciudad de México
+                                            </option>
+
+                                            <option>
+                                                Guadalajara
+                                            </option>
+
+                                            <option>
+                                                Monterrey
+                                            </option>
+
+                                            <option>
+                                                Puebla
+                                            </option>
+
+                                            <option>
+                                                Querétaro
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="mb-3">
+
+                                        <label class="form-label">
+                                            Género
+                                        </label>
+
+
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="genero" id="masculino">
+
+                                            <label class="form-check-label" for="masculino">
+                                                Masculino
+                                            </label>
+
+                                        </div>
+
+
+                                        <div class="form-check">
+
+                                            <input class="form-check-input" type="radio" name="genero" id="femenino">
+
+                                            <label class="form-check-label" for="femenino">
+                                                Femenino
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="mb-3">
+
+                                        <label for="comentarios" class="form-label">
+                                            Comentarios
+                                        </label>
+
+                                        <textarea class="form-control" id="comentarios" name="comentarios" rows="4"></textarea>
+
+                                    </div>
+
+
+                                    <div class="form-check mb-4">
+
+                                        <input class="form-check-input" type="checkbox" id="terminos" name="terminos">
+
+                                        <label class="form-check-label" for="terminos">
+                                            Acepto los términos y condiciones
+                                        </label>
+
+                                    </div>
+
+
+                                    <button type="submit" class="btn btn-primary">
+                                        Guardar
+                                    </button>
+
+
+                                    <button type="reset" class="btn btn-secondary">
+                                        Limpiar
+                                    </button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="tab-pane fade bg-light vista-centrada" id="imagenes" role="tabpanel" aria-labelledby="imagenes-tab">
+
+            <div class="container py-5">
+
+                <h2 class="text-center mb-4">
+                    Muestra de imágenes
+                </h2>
+
+
+                <div class="row g-4 mb-5">
+
+                    <div class="col-md-4">
+
+                        <div class="card h-100 shadow-sm">
+
+                            <img src="https://picsum.photos/600/400?random=1" class="card-img-top" alt="Paisaje">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">
+                                    Naturaleza
+                                </h5>
+
+                                <p class="card-text">
+                                    Ejemplo de una imagen dentro de una tarjeta de Bootstrap.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="card h-100 shadow-sm">
+
+                            <img src="https://picsum.photos/600/400?random=2" class="card-img-top" alt="Ciudad">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">
+                                    Ciudad
+                                </h5>
+
+                                <p class="card-text">
+                                    Bootstrap permite organizar imágenes utilizando columnas.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="card h-100 shadow-sm">
+
+                            <img src="https://picsum.photos/600/400?random=3" class="card-img-top" alt="Paisaje">
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">
+                                    Paisaje
+                                </h5>
+
+                                <p class="card-text">
+                                    Las tarjetas se adaptan al tamaño de la pantalla.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="carouselExample" class="carousel slide shadow rounded overflow-hidden">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://picsum.photos/600/400?random=3" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/600/400?random=4" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/600/400?random=5" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+
+        <div class="container">
+
+            <p class="mb-0">
+                Práctica Bootstrap
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

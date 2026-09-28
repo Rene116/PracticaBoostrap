@@ -1,0 +1,40 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+}
+
+section {
+    scroll-margin-top: 30px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2 {
+    font-weight: bold;
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+footer {
+    margin-top: 0;
+}
+
+.tab-pane.active.vista-centrada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+}
